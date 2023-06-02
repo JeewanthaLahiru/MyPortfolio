@@ -45,6 +45,16 @@ const Homepage:React.FC = () => {
                 </div>
             </div>
 
+            <div className="scroll-wheel-bouncing">
+                <div className="scroll-icon">
+                    <div className="mouse">
+                            <span className="scroll-wheel">
+                                <Icon.ChevronsDown/>
+                            </span>
+                    </div>
+                </div>
+            </div>
+
 
 
         </div>
