@@ -31,13 +31,43 @@
           .circle-button {
             width: 40px; /* Adjust the button size as needed */
             height: 40px;
-            border-radius: 50%;
+            border-radius: 50px;
             margin-bottom: 10px; /* Adjust the margin between buttons as needed */
             padding: 0;
             background: $primary-background-color;
             color: $secondary-color;
-            transition: background-color 0.3s, transform 0.3s;
+            transition: background-color 0.3s, transform 0.3s, width 0.4s, color 0.3s;
+            position: relative;
+            border: none;
+
+            &:hover {
+              padding-left: 10px;
+              text-align: left;
+              transform: translateX(35%);
+              width: 130px;
+              background: $primary-color;
+              transform-origin: right center;
+              color: $text-light;
+
+              .button-text {
+                opacity: 1;
+              }
+              .button-text {
+                transform: translateX(-150%) translateY(-50%);
+              }
+            }
+            .button-text {
+              position: absolute;
+              top: 50%;
+              left: 100%;
+              transform: translateX(-100%) translateY(-50%);
+              opacity: 0;
+              transition: opacity 0.3s, transform 0.3s;
+              transform-origin: left;
+            }
+
           }
+
         }
       }
     }
