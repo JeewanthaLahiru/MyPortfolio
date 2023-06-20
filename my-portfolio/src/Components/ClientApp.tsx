@@ -4,6 +4,7 @@ import BodyArea from "./Body/BodyArea";
 import MobileNavigationBar from "./Navbar/mobileNavigationBar";
 import AboutArea from "./About/AboutArea";
 import ResumeArea from "./Resume/ResumeArea";
+import PortfolioArea from "./Portfolio/PortfolioArea";
 
 const ClientApp:React.FC = () => {
     return(
@@ -16,6 +17,7 @@ const ClientApp:React.FC = () => {
             <BodyArea/>
             <AboutArea/>
             <ResumeArea/>
+            <PortfolioArea/>
 
         </div>
     )
