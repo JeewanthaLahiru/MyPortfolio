@@ -1,0 +1,118 @@
+@import "../Variables/images";
+
+.home-page{
+  width: 100%;
+  height: 100vh;
+  background-image: $home-background-image;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .text-container {
+    margin-left: 10%; /* Adjust as needed */
+    opacity: 0;
+    transform: translateX(-50px) scale(0.5); // Start with small size and positioned to the left
+    transition: opacity 0.3s, transform 0.3s;
+    animation-name: slideInOut;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+
+
+    .home-header-name{
+      font-size: 5em;
+      font-weight: bolder;
+      color: $secondary-color;
+    }
+    .typewriter-text{
+      font-size: 1.5em;
+      font-weight: bold;
+      color:$primary-color;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: flex-start; // Horizontal center alignment
+    }
+    .icon-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 10px 0 0; // Adjust as needed to add spacing between buttons
+      background: transparent;
+      color: $secondary-color;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background: transparent;
+        color: $primary-color;
+        font-size: 100px;
+      }
+    }
+
+  }
+
+  .scroll-icon {
+    position: absolute;
+    bottom: 20px; // Adjust the distance from the bottom as needed
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    animation: bounce 1s infinite;
+
+  }
+
+  .photo-container {
+    position: absolute;
+    top: 20px;
+    right: -100px;
+    z-index: 999;
+    animation: slide-in 1s ease-in-out;
+  }
+
+  .photo {
+    width: 100vh;
+    height: 100vh;
+    //border-radius: 50%;
+  }
+
+  @keyframes slide-in {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slideInOut {
+    from {
+      opacity: 0;
+      transform: translateX(-50px) scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+  }
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
