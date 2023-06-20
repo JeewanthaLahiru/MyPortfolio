@@ -1,0 +1,22 @@
+@import "../Variables/colors";
+
+.about-area{
+  .about-content{
+    .about-underline{
+      .ul-light{
+        height: 2px;
+        background: $secondary-color-light;
+      }
+      .ul-dark{
+        height: 5px;
+        background: $primary-color;
+      }
+    }
+    .about-image-container{
+      .myImage {
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+}
