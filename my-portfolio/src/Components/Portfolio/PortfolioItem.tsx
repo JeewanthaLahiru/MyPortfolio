@@ -5,9 +5,10 @@ import ImageMe from "../../Assets/Images/MyPicFace.png";
 interface portfolioItemProps{
     title: string
     src: string
+    description: string
 }
 
-const PortfolioItem:React.FC<portfolioItemProps> = ({title, src}) => {
+const PortfolioItem:React.FC<portfolioItemProps> = ({title, src,description}) => {
 
     const [isHovered, setIsHovered] = useState(false);
     const handleMouseEnter = () => {
@@ -18,13 +19,13 @@ const PortfolioItem:React.FC<portfolioItemProps> = ({title, src}) => {
     }
 
     return(
-        <Col xs={4} className="portfolio-item" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <Col xs={4} className="portfolio-item mb-5" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div className="image-container">
-                <img src={ImageMe} alt={title} />
+                <img src={src} alt={title} />
             </div>
             <div className="overlay">
-                <h3>{title}</h3>
-                <p>Hello world</p>
+                <h3 className="portfolio-title">{title}</h3>
+                <p className="text-center ps-5 pe-5 portfolio-desc">{description}</p>
             </div>
         </Col>
     )

@@ -1,6 +1,10 @@
 import React, {useState} from "react";
-import {Col, Container, Row} from "react-bootstrap";
+import {Button, Col, Container, Row} from "react-bootstrap";
 import PortfolioItem from "./PortfolioItem";
+import Ecommerce from "./../../Assets/Images/ECommerce.png";
+import TheScrutinizer from "./../../Assets/Images/TheScrutinizer.png";
+import GiniAwi from "../../Assets/Images/Giniawi.png";
+import EndlessRunner from "../../Assets/Images/EndlessRunner.png";
 
 const PortfolioArea:React.FC = () => {
 
@@ -13,10 +17,34 @@ const PortfolioArea:React.FC = () => {
     const [filter, setFilter] = useState<PortfolioFilter>(PortfolioFilter.All);
 
     const portfolioItems = [
-        { id: 1, title: 'Web Project 1', category: PortfolioFilter.Web },
-        { id: 2, title: 'Web Project 2', category: PortfolioFilter.Web },
-        { id: 3, title: 'Game Project 1', category: PortfolioFilter.Gaming },
-        { id: 4, title: 'Game Project 2', category: PortfolioFilter.Gaming },
+        {
+            id: 1,
+            title: 'Shopping Cart',
+            category: PortfolioFilter.Web,
+            image:Ecommerce,
+            description: "This is a web application created using React, expressJS, GraphQL, SCSS"
+        },
+        {
+            id: 2,
+            title: 'The Scrutinizer',
+            category: PortfolioFilter.Web,
+            image: TheScrutinizer,
+            description: "This is an intelligence online exam Monitoring Application"
+        },
+        {
+            id: 3,
+            title: 'Giniawi Saha Gini Keli FanGame',
+            category: PortfolioFilter.Gaming,
+            image: GiniAwi,
+            description: "this is a fan game of Giniawi saha Ginikeli tv series using Unreal Engine"
+        },
+        {
+            id: 4,
+            title: 'EndlessRunner Game',
+            category: PortfolioFilter.Gaming,
+            image: EndlessRunner,
+            description: "this is an endless runner game created using Unreal Engine"
+        },
     ];
     const [filteredItems, setFilteredItems] = useState(portfolioItems);
     const handleFilterChange = (newFilter: PortfolioFilter) => {
@@ -47,19 +75,24 @@ const PortfolioArea:React.FC = () => {
             </h1>
             <div className="portfolio">
                 <nav className="portfolio-nav">
-                    <button className={filter === PortfolioFilter.All ? 'active' : ''} onClick={() => handleFilterChange(PortfolioFilter.All)}>
+                    <Button className={filter === PortfolioFilter.All ? 'active' : ''} onClick={() => handleFilterChange(PortfolioFilter.All)}>
                         All
-                    </button>
-                    <button className={filter === PortfolioFilter.Web ? 'active' : ''} onClick={() => handleFilterChange(PortfolioFilter.Web)}>
+                    </Button>
+                    <Button className={filter === PortfolioFilter.Web ? 'active' : ''} onClick={() => handleFilterChange(PortfolioFilter.Web)}>
                         Web
-                    </button>
-                    <button className={filter === PortfolioFilter.Gaming ? 'active' : ''} onClick={() => handleFilterChange(PortfolioFilter.Gaming)}>
+                    </Button>
+                    <Button className={filter === PortfolioFilter.Gaming ? 'active' : ''} onClick={() => handleFilterChange(PortfolioFilter.Gaming)}>
                         Gaming
-                    </button>
+                    </Button>
                 </nav>
                 <Row className="portfolio-items">
                     {filteredItems.map(item => (
-                        <PortfolioItem key={item.id} title={item.title} src={"sdafa"}  />
+                        <PortfolioItem
+                            key={item.id}
+                            title={item.title}
+                            src={item.image}
+                            description={item.description}
+                        />
                     ))}
                 </Row>
             </div>
