@@ -5,6 +5,7 @@ import Ecommerce from "./../../Assets/Images/ECommerce.png";
 import TheScrutinizer from "./../../Assets/Images/TheScrutinizer.png";
 import GiniAwi from "../../Assets/Images/Giniawi.png";
 import EndlessRunner from "../../Assets/Images/EndlessRunner.png";
+import RichDad from "../../Assets/Images/RichDad.png";
 
 const PortfolioArea:React.FC = () => {
 
@@ -45,6 +46,13 @@ const PortfolioArea:React.FC = () => {
             image: EndlessRunner,
             description: "this is an endless runner game created using Unreal Engine"
         },
+        {
+            id: 5,
+            title: 'Rich dad simulator game',
+            category: PortfolioFilter.Gaming,
+            image: RichDad,
+            description: "this is an simulator game created using unreal engine"
+        }
     ];
     const [filteredItems, setFilteredItems] = useState(portfolioItems);
     const handleFilterChange = (newFilter: PortfolioFilter) => {
