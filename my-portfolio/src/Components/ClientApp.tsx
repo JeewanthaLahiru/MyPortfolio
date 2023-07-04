@@ -5,6 +5,7 @@ import MobileNavigationBar from "./Navbar/mobileNavigationBar";
 import AboutArea from "./About/AboutArea";
 import ResumeArea from "./Resume/ResumeArea";
 import PortfolioArea from "./Portfolio/PortfolioArea";
+import ContactArea from "./Contact/ContactArea";
 
 const ClientApp:React.FC = () => {
     return(
@@ -18,6 +19,7 @@ const ClientApp:React.FC = () => {
             <AboutArea/>
             <ResumeArea/>
             <PortfolioArea/>
+            <ContactArea/>
 
         </div>
     )

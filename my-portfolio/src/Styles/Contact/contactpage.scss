@@ -1,0 +1,12 @@
+.contact-area{
+  .about-underline{
+    .ul-light{
+      height: 2px;
+      background: $secondary-color-light;
+    }
+    .ul-dark{
+      height: 5px;
+      background: $primary-color;
+    }
+  }
+}

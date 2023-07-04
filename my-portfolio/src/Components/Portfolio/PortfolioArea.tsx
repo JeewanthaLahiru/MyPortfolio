@@ -6,6 +6,7 @@ import TheScrutinizer from "./../../Assets/Images/TheScrutinizer.png";
 import GiniAwi from "../../Assets/Images/Giniawi.png";
 import EndlessRunner from "../../Assets/Images/EndlessRunner.png";
 import RichDad from "../../Assets/Images/RichDad.png";
+import PortfolioImg from "../../Assets/Images/PortfolioWebSite.png";
 
 const PortfolioArea:React.FC = () => {
 
@@ -51,7 +52,14 @@ const PortfolioArea:React.FC = () => {
             title: 'Rich dad simulator game',
             category: PortfolioFilter.Gaming,
             image: RichDad,
-            description: "this is an simulator game created using unreal engine"
+            description: "this is an simulator game created using Unreal Engine"
+        },
+        {
+            id: 6,
+            title: 'Portfolio website',
+            category: PortfolioFilter.Web,
+            image: PortfolioImg,
+            description: "this is my portfolio website created using React"
         }
     ];
     const [filteredItems, setFilteredItems] = useState(portfolioItems);
@@ -68,7 +76,7 @@ const PortfolioArea:React.FC = () => {
 
 
     return(
-        <Container className="portfolio-area">
+        <Container className="portfolio-area scroll-target">
             <h1 className={"text-center pt-5"}>
                 Portfolio
                 <div className="about-underline">
