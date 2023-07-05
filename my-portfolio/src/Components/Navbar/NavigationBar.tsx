@@ -33,6 +33,12 @@ const NavigationBar:React.FC = () => {
                     <span className="button-text">About</span>
                 </Button>
                 <Button variant="light" className="circle-button"
+                        onClick={(event) => scrollToTarget('skills-area-content', event)}
+                >
+                    <Icon.Sliders/>
+                    <span className="button-text">Skills</span>
+                </Button>
+                <Button variant="light" className="circle-button"
                         onClick={(event) => scrollToTarget('resume-area', event)}
                 >
                     <Icon.File/>
@@ -44,12 +50,7 @@ const NavigationBar:React.FC = () => {
                     <Icon.Briefcase/>
                     <span className="button-text">Portfolio</span>
                 </Button>
-                <Button variant="light" className="circle-button"
-                        onClick={(event) => scrollToTarget('skills-area-content', event)}
-                >
-                    <Icon.Sliders/>
-                    <span className="button-text">Skills</span>
-                </Button>
+
                 <Button variant="light" className="circle-button"
                         onClick={(event) => scrollToTarget('contact-area', event)}
                 >

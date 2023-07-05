@@ -6,6 +6,7 @@ import AboutArea from "./About/AboutArea";
 import ResumeArea from "./Resume/ResumeArea";
 import PortfolioArea from "./Portfolio/PortfolioArea";
 import ContactArea from "./Contact/ContactArea";
+import FooterArea from "./Footer/FooterArea";
 
 const ClientApp:React.FC = () => {
     return(
@@ -20,6 +21,8 @@ const ClientApp:React.FC = () => {
             <ResumeArea/>
             <PortfolioArea/>
             <ContactArea/>
+
+            <FooterArea/>
 
         </div>
     )
