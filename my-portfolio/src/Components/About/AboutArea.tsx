@@ -51,13 +51,13 @@ const AboutArea:React.FC = () => {
                                 </Col>
                                 <Col xs={6}>
                                     <Row className="m-0 pt-3">
-                                        <Col><Icon.ArrowRightCircle/><strong>Age: </strong>2 Jan 1998</Col>
+                                        <Col><Icon.ArrowRightCircle/><strong>Age: </strong>25</Col>
                                     </Row>
                                     <Row className="m-0 pt-3">
-                                        <Col><Icon.ArrowRightCircle/><strong>Degree: </strong>Software Engineering</Col>
+                                        <Col><Icon.ArrowRightCircle/><strong>Degree: </strong>Bsc(Hons) Software Engineering</Col>
                                     </Row>
                                     <Row className="m-0 pt-3">
-                                        <Col><Icon.ArrowRightCircle/><strong>Email: </strong> +94760441246</Col>
+                                        <Col><Icon.ArrowRightCircle/><strong>Email: </strong>jeewanthalahiru1111@gmail.com</Col>
                                     </Row>
                                 </Col>
                             </Row>
@@ -90,13 +90,13 @@ const AboutArea:React.FC = () => {
                             <h6>React</h6>
                             <ProgressBar now={60} label="60%"/>
                         </Col>
-                        <Col xs={6} className="pt-3">
+                        {/*<Col xs={6} className="pt-3">
                             <h6>Springboot</h6>
                             <ProgressBar now={60} label="60%"/>
-                        </Col>
+                        </Col>*/}
                         <Col xs={6} className="pt-3">
                             <h6>expressjs</h6>
-                            <ProgressBar now={60} label="60%"/>
+                            <ProgressBar now={40} label="40%"/>
                         </Col>
                         <Col xs={6} className="pt-3">
                             <h6>Mysql</h6>
@@ -113,6 +113,10 @@ const AboutArea:React.FC = () => {
                         <Col xs={6} className="pt-3">
                             <h6>Unity</h6>
                             <ProgressBar now={40} label="40%"/>
+                        </Col>
+                        <Col xs={6} className="pt-3">
+                            <h6>AWS</h6>
+                            <ProgressBar now={20} label="20%"/>
                         </Col>
                     </Row>
                 </Container>

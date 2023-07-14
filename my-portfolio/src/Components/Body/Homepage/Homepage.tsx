@@ -6,6 +6,10 @@ import * as Icon from "react-feather";
 
 const Homepage:React.FC = () => {
 
+    const redirectToLink = (url:string) => {
+        window.open(url, '_blank');
+    }
+
 
     return(
         <div className="home-page">
@@ -19,7 +23,7 @@ const Homepage:React.FC = () => {
 
                     <Typewriter
                         options={{
-                            strings: ['I\'m Full Stack Developer'],
+                            strings: ['I\'m a Full Stack Developer'],
                             autoStart: true,
                             loop: true,
                             wrapperClassName: 'line-1',
@@ -30,16 +34,24 @@ const Homepage:React.FC = () => {
                 </div>
                 <br/>
                 <div className="button-container">
-                    <Button className="icon-button">
+                    <Button className="icon-button"
+                            onClick={() => redirectToLink("https://twitter.com/JeewanthaLahir1")}
+                    >
                         <Icon.Twitter/>
                     </Button>
-                    <Button className="icon-button">
+                    <Button className="icon-button"
+                            onClick={() => redirectToLink("https://facebook.com/jeewantha.lahiru.9/")}
+                    >
                         <Icon.Facebook/>
                     </Button>
-                    <Button className="icon-button">
+                    <Button className="icon-button"
+                            onClick={() => redirectToLink("https://www.instagram.com/jeewantha__lahiru/?hl=en")}
+                    >
                         <Icon.Instagram/>
                     </Button>
-                    <Button className="icon-button">
+                    <Button className="icon-button"
+                            onClick={() => redirectToLink("www.linkedin.com/in/jeewantha-lahiru-b85b2917b")}
+                    >
                         <Icon.Linkedin/>
                     </Button>
                 </div>

@@ -5,8 +5,9 @@ import * as Icon from 'react-feather';
 const FooterArea:React.FC = () => {
 
     const redirectToLink = (url:string) => {
-        window.location.href = url;
+        window.open(url, '_blank');
     }
+
 
     return(
         <Container fluid={true} className="footer-area">
